@@ -306,7 +306,7 @@ nav{
                              CATEGORY BUTTONS
 ==============================================================================*/
 
-.category__button{
+.category__button {
     padding: 1rem 1.5rem;
     border-radius: var(--card-border-radius-2);
     border-top: 2px solid var(--color-gray-900);
