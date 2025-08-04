@@ -1,0 +1,20 @@
+const navItems = document.querySelector('.nav-item');
+const openNavBtn = document.querySelector('#open__nav-btn');
+const closeNavBtn = document.querySelector('#close__nav-btn');
+
+// Open Navigation Dropdown
+const openNav = () => {
+    navItems.style.display = 'flex';    
+    openNavBtn.style.display = 'none';
+    closeNavBtn.style.display = 'inline-block';
+}
+
+// Close Navigation Dropdown
+const closeNav = () => {
+    navItems.style.display = 'none';
+    openNavBtn.style.display = 'inline-block';
+    closeNavBtn.style.display = 'none';
+}
+
+openNavBtn.addEventListener('click', openNav);
+closeNavBtn.addEventListener('click', closeNav);
