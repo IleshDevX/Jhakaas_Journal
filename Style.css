@@ -391,7 +391,7 @@ footer ul a:hover{
                         MEDIA QUERIES (MEDIA DEVICES)
 ==============================================================================*/
 
-@media screen and (max-width: 108S0px) {
+@media screen and (max-width: 1080px) {
 
     /* ========================= GENERAL ========================= */
     .container {
@@ -466,7 +466,7 @@ footer ul a:hover{
         align-items: center;
     }
 
-    /* =========================== POSTS =========================== */
+    /* ========================= POSTS ========================= */
     .posts__container {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -476,7 +476,7 @@ footer ul a:hover{
         height: 15rem;
     }
 
-    /* ========================== FEATURED ========================= */
+    /* ========================= FEATURED ========================= */
     .featured {
         padding: 2rem 1rem;
     }
@@ -486,7 +486,7 @@ footer ul a:hover{
         gap: 2rem;
     }
 
-    /* =========================== FOOTER =========================== */
+    /* ========================= FOOTER ========================= */
     .footer__container {
         grid-template-columns: 1fr;
         text-align: center;
@@ -497,4 +497,3 @@ footer ul a:hover{
         margin-bottom: 2rem;
     }
 }
-
