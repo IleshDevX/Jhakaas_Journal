@@ -335,7 +335,7 @@ nav button {
 .featured {
     margin-bottom: 1.6rem !important;
     padding: 4rem !important;
-    margin-top: 5rem !important; /* Add space for fixed nav */
+    margin-top: 5rem !important; 
 }
 
 .featured__container {
@@ -361,7 +361,7 @@ nav button {
     grid-template-columns: repeat(3, 1fr) !important;
     gap: 5rem !important;
     margin-bottom: 5rem !important;
-    background: #0F0F3E !important;  /* Changed from var(--color-gray-700) to match body background */
+    background: #0F0F3E !important;  
     padding: 2rem !important;
     border-radius: var(--card-border-radius-1) !important;
     max-width: none !important;
@@ -458,11 +458,11 @@ footer {
 .footer__container {
     display: grid !important;
     grid-template-columns: repeat(4, 1fr) !important;
-    max-width: 74% !important;  /* Match container width */
+    max-width: 75% !important;  
     width: 100% !important;
-    margin: 0 auto !important;  /* Center the grid */
+    margin: 0 auto !important;  
     padding: 0 !important;
-    gap: 2rem !important;  /* Add consistent spacing between columns */
+    gap: 2rem !important;  
 }
 
 footer h4 {
@@ -526,7 +526,10 @@ footer ul a:hover {
         line-height: 1.8 !important;
     }
 
-    /* ========================= NAVIGATION ========================= */
+/*==============================================================================
+                                    NAVIGATION
+==============================================================================*/
+
     nav {
         height: 3.5rem !important;
         padding: 0.5rem 1rem !important;
@@ -583,7 +586,9 @@ footer ul a:hover {
         text-decoration: none !important;
     }
 
-    /* ========================= POSTS ========================= */
+/*==============================================================================
+                                    POSTS
+==============================================================================*/
     .posts__container {
         grid-template-columns: 1fr !important;
         gap: 2rem !important;
@@ -593,7 +598,9 @@ footer ul a:hover {
         height: 15rem !important;
     }
 
-    /* ========================= FEATURED ========================= */
+/*==============================================================================
+                                    FEATURED
+==============================================================================*/
     .featured {
         padding: 2rem 1rem !important;
         margin-top: 4rem !important;
@@ -604,14 +611,20 @@ footer ul a:hover {
         gap: 2rem !important;
     }
 
-    /* ========================= CATEGORY BUTTONS ========================= */
+/*==============================================================================
+                                CATEGORY BUTTONS
+==============================================================================*/
+ 
     .category__buttons-container {
         grid-template-columns: 1fr !important;
         width: 100% !important;
         padding: 0 1rem !important;
     }
 
-    /* ========================= FOOTER ========================= */
+/*==============================================================================
+                                    FOOTER
+==============================================================================*/
+   
     .footer__container {
         grid-template-columns: 1fr !important;
         text-align: center !important;
@@ -630,7 +643,7 @@ footer ul a:hover {
 
 @media screen and (max-width: 600px) {
     .footer__container {
-        grid-template-columns: 1fr !important;  /* Single column for mobile */
+        grid-template-columns: 1fr !important;
         text-align: center !important;
     }
 }
