@@ -499,9 +499,9 @@ footer ul a:hover {
     margin: 4rem !important;
 }
 
-/*==============================================================================
-                        MEDIA QUERIES (MEDIA DEVICES)
-==============================================================================*/
+/*==================================================================================================
+                            MEDIA QUERIES (MOBILE-PHONE DEVICES)
+===================================================================================================*/
 
 @media screen and (max-width: 1080px) {
     /* ========================= GENERAL ========================= */
@@ -520,7 +520,6 @@ footer ul a:hover {
     h3 { font-size: 1.2rem !important; }
     h5 { font-size: 0.8rem !important; }
 
-    /* ============ Make Text More Readable on Mobile =============== */
     body {
         font-size: 1rem !important;
         line-height: 1.8 !important;
@@ -531,11 +530,12 @@ footer ul a:hover {
 ==============================================================================*/
 
     nav {
-        height: 3.5rem !important;
+        height: 4.5rem !important;
         padding: 0.5rem 1rem !important;
     }
 
     .nav__container {
+        position: relative !important;
         padding: 0 !important;
     }
 
@@ -545,7 +545,7 @@ footer ul a:hover {
         background: transparent !important;
         color: var(--color-white) !important;
         cursor: pointer !important;
-        padding: 0.5rem !important;
+        padding: 11px !important;
         border: none !important;
     }
 
@@ -554,27 +554,65 @@ footer ul a:hover {
     }
 
     .nav__items {
-        position: fixed !important;
-        top: 3.5rem !important;
+        position: absolute !important;
+        top: 100% !important;
         right: 0 !important;
-        width: 100% !important;
+        width: 12rem !important;
         flex-direction: column !important;
         align-items: flex-start !important;
         gap: 0 !important;
         display: none !important;
         background: var(--color-gray-900) !important;
-        padding-left: 0 !important;
+        padding: 0 !important;
         margin: 0 !important;
+        justify-content: center !important;
+    }
+
+    .nav__items.show {
+        display: flex !important;
     }
 
     .nav__items li {
         width: 100% !important;
-        height: 4rem !important;
+        height: 4.5rem !important;
         display: flex !important;
         align-items: center !important;
         border-top: 1px solid var(--color-bg) !important;
         list-style: none !important;
+        box-shadow: -2rem 3rem 7rem rgba(0, 0, 0, 0.7) !important;
+        animation: animateDropdown 1s 0s ease forwards !important;
+        opacity: 0;
+        transform-origin: top;
     }
+
+    .nav__items li:nth-child(2){
+        animation-delay: 200ms !important;
+    }
+
+    .nav__items li:nth-child(3){
+        animation-delay: 400ms !important;
+    }
+
+    .nav__items li:nth-child(4){
+        animation-delay: 600ms !important;
+    }
+
+    .nav__items li:nth-child(5){
+        animation-delay: 800ms !important;
+    }
+
+/* ================== Navigation Dropdown Animation ==================== */
+
+    @keyframes animateDropdown {
+        0% {
+            transform: rotateX(90deg);
+        }
+        100% {
+            transform: rotateX(0deg);
+            opacity: 1;
+        }
+    }
+
 
     .nav__items li a {
         width: 100% !important;
@@ -584,13 +622,28 @@ footer ul a:hover {
         align-items: center !important;
         color: var(--color-white) !important;
         text-decoration: none !important;
+        background: var(--color-gray-900) !important;
+    }
+
+    .nav__profile{
+        background-color: var(--color-gray-900) !important;
+    }
+
+    .nav__profile ul {
+        background-color: var(--color-gray-900) !important;
+    }
+
+    .nav__profile .avatar {
+        margin-left: 2rem !important;
+        border: 0;
+        background-color: var(--color-gray-900) !important;
     }
 
 /*==============================================================================
                                     POSTS
 ==============================================================================*/
     .posts__container {
-        grid-template-columns: 1fr !important;
+        grid-template-columns: 1fr 1fr !important;
         gap: 2rem !important;
     }
 
@@ -607,7 +660,7 @@ footer ul a:hover {
     }
 
     .featured__container {
-        grid-template-columns: 1fr !important;
+        grid-template-columns: 1fr 1fr!important;
         gap: 2rem !important;
     }
 
@@ -616,7 +669,7 @@ footer ul a:hover {
 ==============================================================================*/
  
     .category__buttons-container {
-        grid-template-columns: 1fr !important;
+        grid-template-columns: 1fr 1fr !important;
         width: 100% !important;
         padding: 0 1rem !important;
     }
@@ -626,7 +679,7 @@ footer ul a:hover {
 ==============================================================================*/
    
     .footer__container {
-        grid-template-columns: 1fr !important;
+        grid-template-columns: 1fr 1fr !important;
         text-align: center !important;
         gap: 2rem !important;
         padding: 0 1rem !important;
@@ -641,9 +694,35 @@ footer ul a:hover {
     }
 }
 
+/*==============================================================================
+                            FOR SMALL MEDIA QUERIES
+==============================================================================*/
 @media screen and (max-width: 600px) {
+
+    h1{
+        font-size: 2rem !important;
+    }
+
+    .featured__container {
+        grid-template-columns: 1fr !important;
+        gap: 0 !important;
+    }
+    .posts__container {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+    .category__buttons-container {
+        grid-template-columns: 1fr !important;
+    }
+
     .footer__container {
         grid-template-columns: 1fr !important;
+        align-items: center !important;
+        gap: 2rem !important;
         text-align: center !important;
     }
 }
+
+/*==================================================================================================
+                           END OF MEDIA QUERIES (MOBILE-PHONE DEVICES)
+===================================================================================================*/
