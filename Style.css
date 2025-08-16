@@ -328,6 +328,19 @@ nav button {
     color: #f2f2fe !important;
 }
 
+.post__author-info h5 {
+    font-size: 0.85rem !important; 
+    margin: 0 !important;
+    font-weight: 500 !important;
+}
+
+.post__author-info small {
+    font-size: 0.7rem !important;  
+    margin-top: 0.2rem !important;
+    display: block !important;
+    opacity: 0.9 !important;
+}
+
 /*==============================================================================
                                  FEATURED
 ==============================================================================*/
@@ -375,7 +388,16 @@ nav button {
 }
 
 .post__title {
-    margin-bottom: 1rem !important; 
+    margin-bottom: 1rem !important;
+    font-weight: 700 !important;     /* Makes the title bold */
+    font-size: 1.5rem !important;    /* Slightly larger font size */
+    color: var(--color-white) !important;
+    text-transform: capitalize !important;  /* Capitalizes first letter of each word */
+}
+
+.post__title:hover {
+    color: var(--color-primary) !important;
+    transition: var(--transition) !important;
 }
 
 .post__info a {
@@ -682,6 +704,14 @@ footer ul a:hover {
         height: 15rem !important;
     }
 
+    .post__author-info h5 {
+        font-size: 0.75rem !important;
+    }
+    
+    .post__author-info small {
+        font-size: 0.65rem !important;
+    }
+
 /*==============================================================================
                                     FEATURED
 ==============================================================================*/
@@ -724,6 +754,7 @@ footer ul a:hover {
         margin: 2rem 1rem !important;
     }
 }
+
 
 /*==============================================================================
                             FOR SMALL MEDIA QUERIES
