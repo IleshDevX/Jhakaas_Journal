@@ -547,29 +547,59 @@ footer ul a:hover {
         cursor: pointer !important;
         padding: 11px !important;
         border: none !important;
+        z-index: 1001 !important;
+        position: relative !important;
+        transition: all 0.3s ease !important;
+    }
+
+        
+    nav button#open__nav-btn:hover {
+        background: rgba(255, 255, 255, 0.1) !important;
+        border-radius: 4px !important;
     }
 
     nav button#close__nav-btn {
         display: none !important;
+        visibility: hidden !important;
     }
 
     .nav__items {
-        position: absolute !important;
-        top: 100% !important;
-        right: 0 !important;
-        width: 12rem !important;
+        position: fixed !important;
+        top: 0 !important;
+        right: -100% !important; 
+        width: 70% !important; 
+        height: 100vh !important; 
         flex-direction: column !important;
         align-items: flex-start !important;
+        justify-content: flex-start !important;
         gap: 0 !important;
-        display: none !important;
         background: var(--color-gray-900) !important;
-        padding: 0 !important;
+        padding: 6rem 0 2rem 0 !important; 
         margin: 0 !important;
-        justify-content: center !important;
+        z-index: 1001 !important;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3) !important;
+        transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important; 
+        overflow-y: auto !important; 
     }
 
     .nav__items.show {
-        display: flex !important;
+        right: 0 !important
+    }
+
+        .nav__items::before {
+        content: '';
+        position: fixed !important;
+        top: 0 !important;
+        left: -100vw !important; 
+        width: 100vw !important;
+        height: 100vh !important;
+        background: rgba(0, 0, 0, 0.5) !important; 
+        z-index: -1 !important;
+        transition: left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    }
+
+    .nav__items.show::before {
+        left: 0 !important; 
     }
 
     .nav__items li {
@@ -586,19 +616,19 @@ footer ul a:hover {
     }
 
     .nav__items li:nth-child(2){
-        animation-delay: 200ms !important;
-    }
-
-    .nav__items li:nth-child(3){
         animation-delay: 400ms !important;
     }
 
+    .nav__items li:nth-child(3){
+        animation-delay: 800ms !important;
+    }
+
     .nav__items li:nth-child(4){
-        animation-delay: 600ms !important;
+        animation-delay: 1200ms !important;
     }
 
     .nav__items li:nth-child(5){
-        animation-delay: 800ms !important;
+        animation-delay: 1600ms !important;
     }
 
 /* ================== Navigation Dropdown Animation ==================== */
@@ -623,6 +653,7 @@ footer ul a:hover {
         color: var(--color-white) !important;
         text-decoration: none !important;
         background: var(--color-gray-900) !important;
+        transition: background 0.3s ease !important;
     }
 
     .nav__profile{
