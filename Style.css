@@ -521,11 +521,78 @@ footer ul a:hover {
     margin: 4rem !important;
 }
 
+/*==============================================================================
+                                 SEARCH BAR 
+==============================================================================*/
+.search__bar {
+    margin-top: 8rem !important;
+    margin-bottom: 1rem !important;
+    width: 100% !important;
+    padding: 1rem 0 !important;
+}
+
+.search__bar form {
+    width: 100% !important;
+    max-width: 600px !important;
+    background: linear-gradient(110deg, #4c4fb7, #6366f1) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 0.8rem 3rem 0.8rem 1.5rem !important; 
+    border-radius: 8px !important; 
+    box-shadow: 0 8px 25px rgba(79, 70, 229, 0.3) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    margin: 0 auto !important;
+    height: 3.5rem !important; 
+    gap: 1rem !important;
+}
+
+.search__bar form > div {
+    width: 180% !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 1rem !important;
+}
+
+.search__bar input {
+    background: transparent !important;
+    width: 100% !important;
+    border: none !important;
+    outline: none !important;
+    color: #ffffff !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    height: 100% !important;
+    
+}
+
+/*==============================================================================
+                                SEARCH BAR BUTTON
+==============================================================================*/
+
+.search__bar .btn {
+    background: linear-gradient(110deg, #8b5cf6, #a855f7) !important;
+    color: #ffffff !important;
+    padding: 0.8rem 2rem !important;
+    border-radius: 6px !important; 
+    font-weight: 600 !important;
+    font-size: 0.95rem !important;
+    height: 2.5rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-right: 1rem !important;
+}
+
+
+
 /*==================================================================================================
                             MEDIA QUERIES (MOBILE-PHONE DEVICES)
 ===================================================================================================*/
 
 @media screen and (max-width: 1080px) {
+    
     /* ========================= GENERAL ========================= */
     .container:not(.nav__container):not(.footer__container):not(.posts__container):not(.featured__container):not(.category__buttons-container) {
         width: var(--container-width-md) !important;
@@ -755,6 +822,31 @@ footer ul a:hover {
     }
 }
 
+/*==============================================================================
+                                    BLOG.HTML
+==============================================================================*/
+
+@media screen and (max-width: 1080px) {
+    .search__bar {
+        padding: 1rem 2rem !important;
+        margin-top: 6rem !important;
+    }
+    
+    .search__bar form {
+        max-width: 500px !important;
+        height: 3.2rem !important;
+        padding: 0.8rem 1.2rem !important;
+    }
+
+    .search__bar .btn {
+        padding: 0.6rem 1.8rem !important;
+        font-size: 0.9rem !important;
+        height: 2.3rem !important;
+        margin-right: -0.5rem !important;
+    }
+
+    
+}
 
 /*==============================================================================
                             FOR SMALL MEDIA QUERIES
@@ -782,6 +874,31 @@ footer ul a:hover {
         align-items: center !important;
         gap: 2rem !important;
         text-align: center !important;
+    }
+}
+
+/*==============================================================================
+                                    BLOG.HTML
+==============================================================================*/
+
+@media screen and (max-width: 600px) {
+    .search__bar form {
+        max-width: 100% !important;
+        height: 3rem !important;
+        padding: 0.7rem 1rem !important;
+        border-radius: 6px !important;
+    }
+    
+    .search__bar input {
+        font-size: 0.9rem !important;
+    }
+    
+    .search__bar .btn {
+        padding: 0.5rem 1.5rem !important;
+        font-size: 0.85rem !important;
+        height: 2.2rem !important;
+        border-radius: 4px !important;
+        margin-right: -0.7rem !important;
     }
 }
 
